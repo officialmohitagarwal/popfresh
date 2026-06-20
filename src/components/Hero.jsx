@@ -33,8 +33,10 @@ export default function Hero() {
         className="
             relative
             min-h-screen
-            max-w-[1800px]
+            max-w-[1440px]
             mx-auto
+            px-8
+            lg:px-12
             overflow-hidden
         "
       >
@@ -75,10 +77,10 @@ export default function Hero() {
           />
         ))}
 
-        <div className="relative z-10 min-h-[110vh] lg:min-h-screen grid lg:grid-cols-[45%_55%] items-center pt-44 lg:pt-36">
+        <div className="relative z-10 min-h-[110vh] lg:min-h-screen grid lg:grid-cols-[45%_58%] items-center pt-42 lg:pt-34">
           {/* LEFT SIDE */}
 
-          <div className="order-1 lg:order-1 flex flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20">
+          <div className="order-1 lg:order-1 flex flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-16 max-w-[620px] lg:-translate-y-10">
             {/* Badge */}
 
             <div
@@ -86,13 +88,13 @@ export default function Hero() {
                 inline-flex
                 items-center
                 gap-2
-                px-5
-                py-3
+                px-4
+                py-2
                 rounded-full
                 border
                 border-[#CFAE62]
                 text-[#E6C06A]
-                text-sm
+                text-xs
                 tracking-[0.15em]
                 w-fit
                 
@@ -113,7 +115,7 @@ export default function Hero() {
                 sm:text-7xl
               "
               style={{
-                fontSize: "clamp(5rem,7vw,7rem)",
+                fontSize: "clamp(4rem,6vw,6rem)",
                 fontFamily: "'Fraunces', serif",
                 fontWeight: 600,
               }}
@@ -129,7 +131,7 @@ export default function Hero() {
                 sm:text-5xl
               "
               style={{
-                fontSize: "clamp(3rem,5vw,4rem)",
+                fontSize: "clamp(2.5rem,4vw,3.5rem)",
                 fontFamily: "'Fraunces', serif",
                 fontWeight: 600,
               }}
@@ -139,7 +141,7 @@ export default function Hero() {
 
             {/* Description */}
 
-            <p className="mt-10 text-white/80 text-base sm:text-lg lg:text-xl leading-7 lg:leading-10 max-w-[560px] ">
+            <p className="mt-8 text-white/80 text-base lg:text-lg leading-7 lg:leading-10 max-w-[520px] ">
               Crafted from premium fox nuts and roasted to perfection,
               <br />
               Pop Fresh transforms healthy snacking into an indulgent
@@ -148,15 +150,15 @@ export default function Hero() {
 
             {/* Buttons */}
 
-            <div className="flex flex-wrap gap-5 mt-8">
+            <div className="flex flex-wrap gap-5 mt-6">
               <Link
                 to="/products"
                 className="
                   group
                   bg-[#E2BF69]
                   text-[#173A2D]
-                  px-10
-                  py-5
+                  px-8
+                  py-4
                   rounded-full
                   font-semibold
                   flex items-center gap-3
@@ -190,18 +192,19 @@ export default function Hero() {
 
           <div
             className="
-    order-2 lg:order-2
-    relative
-    flex
-    items-center
-    justify-center
-    overflow-visible
-    h-[420px]
-    sm:h-[550px]
-    lg:h-[750px]
-    mt-10 lg:mt-0
-  "
-          >
+                order-2 lg:order-2
+                relative
+                flex
+                items-center
+                justify-center
+                overflow-visible
+                h-[420px]
+                sm:h-[550px]
+                lg:h-[750px]
+                mt-10 lg:mt-0
+                lg:-translate-y-12
+            "
+            >
             {/* Rings */}
 
             <div
@@ -212,8 +215,8 @@ export default function Hero() {
                 h-[280px]
                 sm:w-[420px]
                 sm:h-[420px]
-                lg:w-[620px]
-                lg:h-[620px]
+                lg:w-[560px]
+                lg:h-[560px]
                 rounded-full
                 border
                 border-[#D9C074]/25
@@ -228,8 +231,8 @@ export default function Hero() {
                 h-[200px]
                 sm:w-[320px]
                 sm:h-[320px]
-                lg:w-[470px]
-                lg:h-[470px]
+                lg:w-[420px]
+                lg:h-[420px]
                 rounded-full
                 border
                 border-[#D9C074]/25
@@ -244,8 +247,8 @@ export default function Hero() {
                 h-[140px]
                 sm:w-[220px]
                 sm:h-[220px]
-                lg:w-[320px]
-                lg:h-[320px]
+                lg:w-[280px]
+                lg:h-[280px]
                 rounded-full
                 border
                 border-[#D9C074]/25
@@ -280,7 +283,7 @@ export default function Hero() {
                     transform: `
                         translate(-50%, -50%)
                         rotate(${deg}deg)
-                        translateX(${isMobile ? 140 : 310}px)
+                        translateX(${isMobile ? 140 : 270}px)
                     `,
                   }}
                 >
@@ -313,7 +316,7 @@ export default function Hero() {
                   key={i}
                   className="absolute left-1/2 top-1/2"
                   style={{
-                    transform: `rotate(${deg}deg) translateX(${isMobile ? 105 : 235}px)`,
+                    transform: `rotate(${deg}deg) translateX(${isMobile ? 105 : 190}px)`,
                   }}
                 >
                   <Makhana size={isMobile ? 28 : 48} />
@@ -345,7 +348,7 @@ export default function Hero() {
                   key={i}
                   className="absolute left-1/2 top-1/2"
                   style={{
-                    transform: `rotate(${deg}deg) translateX(${isMobile ? 65 : 160}px)`,
+                    transform: `rotate(${deg}deg) translateX(${isMobile ? 65 : 125}px)`,
                   }}
                 >
                   <Makhana size={isMobile ? 22 : 36} />
@@ -390,7 +393,7 @@ export default function Hero() {
                 z-20
                 w-[220px]
                 sm:w-[300px]
-                lg:w-[390px]
+                lg:w-[360px]
                 
               "
               style={{
